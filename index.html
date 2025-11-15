@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK 02 - Stopwatch Web Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="geometric-decoration geometric-top-left"></div>
+    <div class="geometric-decoration geometric-top-right"></div>
+    <div class="geometric-decoration geometric-bottom-left"></div>
+    <div class="geometric-decoration geometric-bottom-right"></div>
+
+    <div class="dots-line dots-left"></div>
+    <div class="dots-line dots-right"></div>
+
+    <main class="container">
+        <!-- Header -->
+        <div class="header-section">
+            <h1 class="title">Stopwatch Web Application</h1>
+        </div>
+
+        <!-- Main Display -->
+        <div class="stopwatch-section">
+            <div class="stopwatch-display">
+                <div class="time-display">
+                    <span class="time-segment">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">h</span>
+                    </span>
+                    <span class="time-separator">:</span>
+                    <span class="time-segment">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">m</span>
+                    </span>
+                    <span class="time-separator">:</span>
+                    <span class="time-segment">
+                        <span class="time-value" id="seconds">00</span>
+                        <span class="time-label">s</span>
+                    </span>
+                    <span class="time-separator">.</span>
+                    <span class="time-segment milliseconds">
+                        <span class="time-value" id="milliseconds">00</span>
+                        <span class="time-label">ms</span>
+                    </span>
+                </div>
+                <div class="circular-display" id="circularDisplay"></div>
+            </div>
+
+            <!-- Control Buttons -->
+            <div class="controls-section">
+                <button class="btn btn-primary" id="startPauseBtn">
+                    <span class="btn-icon">▶</span>
+                    <span class="btn-text">Start</span>
+                </button>
+                <button class="btn btn-secondary" id="lapBtn">
+                    <span class="btn-icon">⊕</span>
+                    <span class="btn-text">Lap</span>
+                </button>
+                <button class="btn btn-tertiary" id="resetBtn">
+                    <span class="btn-icon">↻</span>
+                    <span class="btn-text">Reset</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Laps Section -->
+        <div class="laps-section">
+            <h2 class="laps-title">Lap Times</h2>
+            <div class="laps-list" id="lapsList">
+                <div class="no-laps-message">No laps recorded yet. Start timing to record laps!</div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
